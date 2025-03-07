@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./ToggleText.css"; // ✅ Separate CSS file for animations
 
 const ToggleText = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -12,7 +13,9 @@ const ToggleText = () => {
       >
         {isVisible ? "Hide Text ⬆" : "Show Text ⬇"}
       </button>
-      {isVisible && <p className="toggle-text">This is the text that gets toggled.</p>}
+      <div className={`toggle-text ${isVisible ? "visible" : "hidden"}`}>
+        This is the text that gets toggled.
+      </div>
     </div>
   );
 };

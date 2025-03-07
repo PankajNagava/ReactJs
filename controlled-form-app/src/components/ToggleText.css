@@ -1,0 +1,46 @@
+/* ToggleText.css */
+
+.toggle-container {
+    padding: 20px;
+    background: #e3e3e3;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .toggle-btn {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .toggle-btn:hover {
+    background: #0056b3;
+  }
+  
+  .hide-btn {
+    background: red;
+  }
+  
+  .hide-btn:hover {
+    background: darkred;
+  }
+  
+  /* Smooth Animation for Text */
+  .toggle-text {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease-out, max-height 0.3s ease-out;
+  }
+  
+  .toggle-text.visible {
+    opacity: 1;
+    max-height: 100px;
+    transition: opacity 0.3s ease-in, max-height 0.3s ease-in;
+  }
+  

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 const ControlledForm = () => {
   const [formData, setFormData] = useState({ name: "", email: "" });
+  const [submittedData, setSubmittedData] = useState([]); // ✅ Store submitted users
   const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e) => {
@@ -11,9 +12,10 @@ const ControlledForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (formData.name && formData.email) {
+      setSubmittedData([...submittedData, formData]); // ✅ Store new user
       setSubmitted(true);
-      setTimeout(() => setSubmitted(false), 3000); // Message disappears after 3 seconds
-      setFormData({ name: "", email: "" }); // ✅ Clear inputs after submission
+      setTimeout(() => setSubmitted(false), 3000); // ✅ Show success message briefly
+      setFormData({ name: "", email: "" }); // ✅ Clear input fields
     }
   };
 
@@ -47,9 +49,20 @@ const ControlledForm = () => {
         </button>
       </form>
       {submitted && <p className="success-msg">Form submitted successfully! 🎉</p>}
-      <h3>Live Preview</h3>
-      <p><strong>Name:</strong> {formData.name}</p>
-      <p><strong>Email:</strong> {formData.email}</p>
+
+      {/* ✅ Show submitted users */}
+      {submittedData.length > 0 && (
+        <div className="submitted-list">
+          <h3>Submitted Users</h3>
+          <ul>
+            {submittedData.map((data, index) => (
+              <li key={index}>
+                <strong>{data.name}</strong> ({data.email})
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 };

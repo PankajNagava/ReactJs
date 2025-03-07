@@ -49,6 +49,23 @@ button:disabled {
   font-weight: bold;
 }
 
+/* Submitted Users */
+.submitted-list {
+  margin-top: 20px;
+}
+
+.submitted-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.submitted-list li {
+  background: #ddd;
+  padding: 8px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
 /* Toggle Text */
 .toggle-container {
   padding: 20px;
@@ -60,9 +77,10 @@ button:disabled {
   padding: 10px 15px;
   background-color: #007bff;
   color: white;
+  border-radius: 5px;
 }
 
-.show-btn:hover {
+.toggle-btn:hover {
   background: #0056b3;
 }
 
@@ -72,4 +90,18 @@ button:disabled {
 
 .hide-btn:hover {
   background: darkred;
+}
+
+/* Toggle Text Animation */
+.toggle-text {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-out;
+}
+
+.toggle-text.visible {
+  opacity: 1;
+  max-height: 100px;
+  transition: all 0.3s ease-in;
 }
