@@ -3,37 +3,73 @@
   padding: 20px;
 }
 
+/* Form Styling */
 .form-container {
   background: #f9f9f9;
   padding: 20px;
   border-radius: 5px;
   margin-bottom: 20px;
+  width: 300px;
+  margin: auto;
 }
 
 input {
   display: block;
   margin: 10px auto;
   padding: 10px;
-  width: 80%;
+  width: 90%;
   max-width: 300px;
 }
 
 button {
   padding: 10px 15px;
-  background-color: #007bff;
-  color: white;
+  margin: 5px;
   border: none;
   cursor: pointer;
-  margin-top: 10px;
 }
 
-button:hover {
-  background-color: #0056b3;
+button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
 }
 
+/* Reset Button */
+.reset-btn {
+  background: red;
+  color: white;
+}
+
+.reset-btn:hover {
+  background: darkred;
+}
+
+/* Success Message */
+.success-msg {
+  color: green;
+  font-weight: bold;
+}
+
+/* Toggle Text */
 .toggle-container {
   padding: 20px;
   background: #e3e3e3;
   border-radius: 5px;
 }
 
+.toggle-btn {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+}
+
+.show-btn:hover {
+  background: #0056b3;
+}
+
+.hide-btn {
+  background: red;
+}
+
+.hide-btn:hover {
+  background: darkred;
+}

@@ -6,10 +6,13 @@ const ToggleText = () => {
   return (
     <div className="toggle-container">
       <h2>Show/Hide Text</h2>
-      <button onClick={() => setIsVisible(!isVisible)}>
-        {isVisible ? "Hide Text" : "Show Text"}
+      <button
+        className={`toggle-btn ${isVisible ? "hide-btn" : "show-btn"}`}
+        onClick={() => setIsVisible(!isVisible)}
+      >
+        {isVisible ? "Hide Text ⬆" : "Show Text ⬇"}
       </button>
-      {isVisible && <p>This is the text that gets toggled.</p>}
+      {isVisible && <p className="toggle-text">This is the text that gets toggled.</p>}
     </div>
   );
 };
