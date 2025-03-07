@@ -1,0 +1,107 @@
+.app-container {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Form Styling */
+.form-container {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  width: 300px;
+  margin: auto;
+}
+
+input {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 90%;
+  max-width: 300px;
+}
+
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+/* Reset Button */
+.reset-btn {
+  background: red;
+  color: white;
+}
+
+.reset-btn:hover {
+  background: darkred;
+}
+
+/* Success Message */
+.success-msg {
+  color: green;
+  font-weight: bold;
+}
+
+/* Submitted Users */
+.submitted-list {
+  margin-top: 20px;
+}
+
+.submitted-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.submitted-list li {
+  background: #ddd;
+  padding: 8px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+/* Toggle Text */
+.toggle-container {
+  padding: 20px;
+  background: #e3e3e3;
+  border-radius: 5px;
+}
+
+.toggle-btn {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+}
+
+.toggle-btn:hover {
+  background: #0056b3;
+}
+
+.hide-btn {
+  background: red;
+}
+
+.hide-btn:hover {
+  background: darkred;
+}
+
+/* Toggle Text Animation */
+.toggle-text {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-out;
+}
+
+.toggle-text.visible {
+  opacity: 1;
+  max-height: 100px;
+  transition: all 0.3s ease-in;
+}
